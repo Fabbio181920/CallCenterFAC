@@ -5,11 +5,13 @@ public class Societa {
     private HashMap<String, Dipendente> dipendenti;
     private HashMap<String, Cliente> clienti;
     private HashMap<String, String> telefonate;
+    private InfoClass info; 
 
     public Societa() {
         this.dipendenti = new HashMap<>();
         this.clienti = new HashMap<>();
         this.telefonate = new HashMap<>();
+        this.info = new InfoClass();
     }
 
     public void addDipendente(Dipendente d) {
@@ -39,7 +41,7 @@ public class Societa {
     }
 
     public String[] chiamata(Cliente cliente) {
-        InfoClass info = new InfoClass();
         return info.chiamataInfo(cliente, dipendenti, clienti, telefonate);
     }
+  
 }
